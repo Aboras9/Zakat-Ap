@@ -1,0 +1,84 @@
+<div class="container mt-3">
+  <div class="card shadow">
+    <div class="card-header">
+      <h2 class="text-center m-4">إدخال بيانات اللجنة</h2>
+    </div>
+    <div class="card-body">
+      <form  class="row g-3">
+        <div class="col-md-4">
+          <label class="mb-1">اسم اللجنة:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="committeeName"
+            required
+          />
+          <div *ngIf="errors.committeeName" class="text-danger"></div>
+        </div>
+        <div class="col-md-4">
+          <label class="mb-1">رقم اللجنة الأب:</label>
+          <input
+            class="form-control"
+            type="number"
+            name="partnerId"
+          />
+          <div *ngIf="errors.partnerId" class="text-danger"></div>
+        </div>
+        <div class="col-md-4">
+          <label class="mb-1">رقم الكشف:</label>
+          <input
+            class="form-control"
+            type="number"
+            name="listId"
+          />
+          <div *ngIf="errors.listId" class="text-danger"></div>
+        </div>
+        <div class="col-md-4">
+          <label class="mb-1">الحالة:</label>
+          <select
+            class="form-control"
+            name="status"
+          >
+            <option value="">-- اختر الحالة --</option>
+            <option value="0">غير نشطة</option>
+            <option value="1">نشطة</option>
+          </select>
+          <div *ngIf="errors.status" class="text-danger"></div>
+        </div>
+        <div class="col-md-4">
+          <label>تم الإضافة بواسطة:</label>
+          <select
+            class="form-control"
+            name="addedBy"
+          >
+            <option value="">-- اختر مستخدم --</option>
+            <option *ngFor="let user of users" [value]="user.idUser"></option>
+          </select>
+          <div *ngIf="errors.addedBy" class="text-danger"></div>
+        </div>
+        <div class="col-md-4">
+          <label class="mb-1">اختر اللجنة:</label>
+          <select
+            class="form-control"
+            name="committeeType"
+          >
+            <option value="">-- اختر لجنة --</option>
+            <option *ngFor="let committee of committees" [value]="committee.idConstants"></option>
+          </select>
+          <div *ngIf="errors.committeeType" class="text-danger"></div>
+        </div>
+        <div class="col-md-4">
+          <label class="mb-1">تاريخ الإضافة:</label>
+          <input
+            class="form-control"
+            type="date"
+            name="addDate"
+          />
+        </div>
+        <div class="mt-5">
+          <button type="submit" class="btn btn-lg btn-primary">إرسال</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container mt-3">
+  <div class="card shadow">
+    <div class="card-header">
+      <div class="container">
+        <h2 class="text-center m-4">إضافة وظيفة جديدة</h2>
+        <div class="card-body">
+          <form  class="row g-3">
+            <div class="col-md-4">
+              <label for="jobTitle" class="form-label">اسم الوظيفة أو المهنة</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="اسم الوظيفة أو المهنة"
+                name="jobTitle"
+
+              />
+            </div>
+            <div class="col-md-4">
+              <label class="mb-1">الحالة:</label>
+              <select
+                class="form-control"
+                name="status"
+
+                required
+              >
+                <option value="0">غير نشط</option>
+                <option value="1">نشط</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="mb-1">تاريخ الإضافة:</label>
+              <input
+                class="form-control"
+                type="date"
+                name="addDate"
+
+                required
+              />
+            </div>
+            <div class="mt-5">
+              <button type="submit" class="btn btn-lg btn-primary">إرسال</button>
+              <a class="btn btn-lg btn-outline-danger mx-2" >إلغاء</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

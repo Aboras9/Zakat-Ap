@@ -1,0 +1,73 @@
+<div class="container mt-3">
+  <div class="card shadow">
+    <div class="card-header">
+      <div class="container">
+        <h3 class="text-center m-4">توقيف عضو</h3>
+      </div>
+      <div class="card-body">
+        <form class="row g-3" >
+          <div class="col-md-4">
+            <label class="mb-1">اسم العضو:</label>
+            <select class="form-control"  name="memberId" required>
+              <option value="">اختر العضو</option>
+              <option *ngFor="let member of members" [value]="member.memberId">
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">نوع الإيقاف:</label>
+            <select class="form-control"  name="suspendType" required>
+              <option value="0">غير نشط</option>
+              <option value="1">نشط</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">سبب الإيقاف:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="suspendReason"
+              required
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label class="mb-1">أضيف عبر:</label>
+            <select class="form-control" name="addedBy" required>
+              <option value="">اختر من أضاف العضو</option>
+              <option *ngFor="let user of users" [value]="user.idUser">
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">تاريخ الإيقاف:</label>
+            <input
+              class="form-control"
+              type="date"
+              name="suspendDate"
+              required
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">تاريخ الإضافة:</label>
+            <input
+              class="form-control"
+              type="date"
+
+              name="addDate"
+              required
+            />
+          </div>
+
+          <div class="mt-5">
+            <button type="submit" class="btn btn-lg btn-primary">حفظ الإدخال</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

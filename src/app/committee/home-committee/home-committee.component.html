@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="py-4">
+    <h2 class="text-center m-4 card-header">قائمة اللجان</h2>
+    <div *ngIf="loading">جاري تحميل البيانات...</div>
+    <div *ngIf="error" class="text-danger"></div>
+    <table class="table border shadow" >
+      <thead>
+        <tr>
+          <th scope="col">الرقم</th>
+          <th scope="col">اسم اللجنة</th>
+          <th scope="col">معرف اللجنة الأب</th>
+          <th scope="col">الحالة</th>
+          <th scope="col">تاريخ الإضافة</th>
+          <th scope="col">الإجراء</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let committee of committees; let index = index">
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <a class="btn btn-primary mx-2" >التفاصيل</a>
+            <a class="btn btn-outline-primary mx-2" >تعديل</a>
+            <button class="btn btn-danger mx-2" >حذف</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

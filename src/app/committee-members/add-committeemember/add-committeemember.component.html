@@ -1,0 +1,83 @@
+<div class="container mt-3">
+  <div class="card shadow">
+    <div class="card-header">
+      <h2 class="text-center m-4">اضافة عضو الى اللجنة</h2>
+    </div>
+    <div class="card-body">
+      <form  class="row g-3">
+        <div class="col-md-4">
+          <label>المسمى الوظيفي:</label>
+          <select
+            class="form-control"
+            name="jobTitle"
+            required
+          >
+            <option value="">-- اختر الوظيفة --</option>
+            <option *ngFor="let job of jobTitles" [value]="job.jobId">
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label>الترتيب :</label>
+          <select
+            class="form-control"
+            name="position"
+            required
+          >
+            <option value="">-- اختر الترتيب --</option>
+            <option *ngFor="let pos of positions" [value]="pos.idConstants">
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label>تم الإضافة بواسطة:</label>
+          <select
+            class="form-control"
+            name="addedBy"
+            required
+          >
+            <option value="">-- اختر مستخدم --</option>
+            <option *ngFor="let user of users" [value]="user.idUser">
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label>تاريخ الإضافة:</label>
+          <input
+            class="form-control"
+            type="date"
+            name="addDate"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label>معرف اللجنة:</label>
+          <select
+            class="form-control"
+            name="committeeId"
+            required
+          >
+            <option value="">-- اختر لجنة --</option>
+            <option *ngFor="let committee of committees" [value]="committee.committeeId">
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label>معرف العضو:</label>
+          <select
+            class="form-control"
+            name="memberId"
+            required
+          >
+            <option value="">-- اختر عضو --</option>
+            <option *ngFor="let member of members" [value]="member.memberId">
+            </option>
+          </select>
+        </div>
+        <div class="mt-5">
+          <button type="submit" class="btn btn-lg btn-primary">إرسال</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

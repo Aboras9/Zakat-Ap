@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="py-4">
+    <h2 class="text-center m-4 card-header">قائمة الأعضاء الموقوفين</h2>
+    <table class="table border shadow">
+      <thead>
+        <tr>
+          <th scope="col">الرقم</th>
+          <th scope="col">الاسم الكامل</th>
+          <th scope="col">سبب الإيقاف</th>
+          <th scope="col">أضيف عبر</th>
+          <th scope="col">الحالة</th>
+          <th scope="col">تاريخ الإضافة</th>
+          <th scope="col">تاريخ الإيقاف</th>
+          <th scope="col">الإجراء</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of suspendMembers; let i = index">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <a class="btn btn-primary mx-2" >التفاصيل</a>
+            <a class="btn btn-outline-primary mx-2">تعديل</a>
+            <button class="btn btn-danger mx-2" >حذف</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

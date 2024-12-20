@@ -1,0 +1,67 @@
+<div class="container mt-3">
+  <div class="card shadow">
+    <div class="card-header">
+      <div class="container">
+        <h2 class="text-center m-4">اضافة مستخدم</h2>
+        <div class="card-body">
+          <form class="row g-3">
+            <div class="col-md-4">
+              <label for="fullName" class="form-label">الاسم الكامل</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="ادخل الاسم الكامل"
+                name="fullName"
+
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="userName" class="form-label">اسم المستخدم</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="ادخل اسم المستخدم"
+                name="userName"
+
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="password" class="form-label">كلمة المرور</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="ادخل كلمة المرور"
+                name="password"
+
+              />
+            </div>
+            <div class="col-md-4">
+              <label class="mb-1">الحالة:</label>
+              <select
+                class="form-control"
+
+                required
+              >
+                <option value="0">غير نشط</option>
+                <option value="1">نشط</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="mb-1">تاريخ الإضافة:</label>
+              <input
+                class="form-control"
+                type="date"
+
+                required
+              />
+            </div>
+            <div class="mt-5">
+              <button type="submit" class="btn btn-lg btn-primary">إرسال</button>
+              <a class="btn btn-lg btn-outline-danger mx-2" >الغاء</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
